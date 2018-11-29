@@ -1,0 +1,54 @@
+{% extends 'core/base.html'  %}
+
+{% block title %} Guias {% endblock %}
+
+    <!-- Main section -->
+    <main class="container mb-5 mt-5">
+      {% block content %}
+      <h3>Guias</h3>
+      <p class="lead">Escrito por Daniel Casado</p>
+      <hr>
+      <div class="row">
+        <!-- Articles -->
+        <div class="col-12">
+          <!-- 1 article -->
+          <div class="row mb-5 mt-5">
+
+           {% for guide in guides %}
+            <div class="col-md-4 text-center">
+                <div class="card zoom">
+                    <div class="card-header">
+                        <h4 class="text-center">{{ guide.title }}</h4>
+                    </div>
+                    <img src="{{ guide.image.url }}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <p>{{ guide.content }}</p>
+                        <button class="btn btn-primary">Ver mas...</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+          </div>
+          <!-- Pagination -->
+          <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- End articles -->
+
+        <!-- Aside -->
+        <!-- End Aside -->
+
+      </div>
+    </main>
+    <!-- End Main -->
+    {% endblock %}

@@ -1,0 +1,57 @@
+
+body {
+  background: #EBEBEB;
+  font-family: 'Raleway', sans-serif;
+}
+
+.slider {
+  background: url("../images/bg-3.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+footer {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
+.carousel-caption {
+  background-color: rgba(0,0,0,0.75);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 30px 0px;
+}
+
+header {
+  margin-bottom: 75px;
+}
+
+.carousel img {
+  height: 100%;
+  max-height: 450px;
+}
+
+.link-slider a {
+  color: rgba(255,255,255,.5);
+  margin: 0px;
+}
+
+.link-slider a:hover {
+  color: rgba(55,182,206,.75);
+}
+
+.about-text {
+  color: rgba(255,255,255,.75);
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
